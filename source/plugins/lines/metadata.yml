@@ -1,0 +1,23 @@
+name: "👨‍💻 Lines of code changed"
+cost: 1 REST request per repository
+category: github
+index: 12
+supports:
+  - user
+  - organization
+  - repository
+inputs:
+
+  # Enable or disable plugin
+  plugin_lines:
+    description: Display lines of code metrics
+    type: boolean
+    default: no
+
+  # List of repositories that will be skipped
+  plugin_lines_skipped:
+    description: Repositories to skip
+    type: array
+    format: comma-separated
+    default: ""
+    example: my-repo-1, my-repo-2, owner/repo-3 ...

@@ -1,0 +1,39 @@
+name: "🏅 Repository contributors"
+cost: N/A
+category: github
+index: 5
+supports:
+  - repository
+inputs:
+
+  # Enable or disable plugin
+  plugin_contributors:
+    description: Display repository contributors
+    type: boolean
+    default: no
+
+  # Base reference (commit, tag, branch, etc.)
+  plugin_contributors_base:
+    description: Base reference
+    type: string
+    default: ""
+    example: commit, tag or branch
+
+  # Head reference (commit, tag, branch, etc.)
+  plugin_contributors_head:
+    description: Head reference
+    type: string
+    default: master
+
+  # Ignored contributors (useful to ignore bots users)
+  plugin_contributors_ignored:
+    description: Contributors to ignore
+    type: array
+    format: comma-separated
+    default: github-actions[bot], dependabot[bot], dependabot-preview[bot]
+
+  # Display total contributions for each contributor
+  plugin_contributors_contributions:
+    description: Display contributions
+    type: boolean
+    default: no
